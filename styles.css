@@ -1,0 +1,156 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(90deg, #ee67cc, #8257e6); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.activity-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    animation: reassemble 2s ease-in-out; /* Add reassemble animation */
+}
+
+@keyframes reassemble {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.activity-box {
+    margin-top: 20px;
+    background-color: #f8f9fa; /* Light background color for the activity box */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#activity-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+#timer-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+#start-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-button:hover {
+    background-color: #45a049;
+}
+
+/* Add styles for audio controls */
+#audio-controls {
+    position: fixed;
+    bottom: 10px; /* Adjust as needed for vertical position */
+    right: 10px; /* Adjust as needed for horizontal position */
+    z-index: 1000; /* Ensure the controls appear above other content */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#play-button,
+#pause-button {
+    margin-right: 10px;
+}
+
+/* Add a background gradient label */
+body::before {
+    content: "BETTER"; /* Your desired label text */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-bottom-right-radius: 10px; /* Match the background container */
+    z-index: 9999; /* Ensure the label appears above other content */
+}
+
+/* Existing CSS for other elements */
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup h2 {
+    font-size: 24px;
+}
+
+.popup p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.popup input[type="email"],
+.popup button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Position the email-popup at the bottom-right corner */
+#email-popup {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+/* Add some margin to body to prevent content from being hidden */
+body {
+    margin-bottom: 100px;
+}
